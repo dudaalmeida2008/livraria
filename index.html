@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" 
+  rel="stylesheet"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/output.css" />
+  <title>Livraria da Duda | Conheça nossos livros!</title>
+  <style>
+    #modal-cart {
+      display: none; /* Ocultar por padrão */
+    }
+
+    #modal-cart .bg-white {
+      max-width: 400px; /* Define a largura máxima */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- INÍCIO HEADER -->
+  <header class="w-full h-[420px] bg-zinc-900 bg-header">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+      <img src="./assets/perfil.webp" alt="" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
+      <h1 class="text-4xl mt-4 mb-2 font-bold text-white">livraria da duda 
+      </h1>
+      <span class="text-white font-medium">Rua jardim 455- belo horizonte /span>
+      <span class="text-white font-medium">**(modelo de demonstração)**</span>
+      <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+        <span class="text-white font-medium">Segunda à sabado - das 13 as21h</span>
+      </div>
+    </div>
+  </header>
+  <!-- FIM HEADER -->
+
+  <h2 class="text-2xl md:text-5xl font-bold text-center mt-9 mb-6">
+    Conheça o nossos livros 
+  </h2>
+
+  <!-- INICIO MENU -->
+  <div id="menu">
+
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+      <!-- PRODUTO ITEM 1 -->
+      <div class="flex gap-2">
+        <img src="assets/imagem-02.jpeg" alt="ate o verão termina" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div>
+          <p class="font-bold"livro maravilhoso</p>
+          <p class="text-sm"esse livro e muito recomendados das redes sociais </p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 18,90</p>
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="ate o verão termina" data-price="18.90" >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM PRODUTO ITEM 1-->
+
+      <!-- PRODUTO ITEM 2 -->
+      <div class="flex gap-2">
+        <img src="assets/imagem-03.jpg" alt="e assim que começa" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div>
+          <p class="font-bold">incrivel</p>
+          <p class="text-sm"e um livro de romance muito bonito</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 32,99</p>
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="e assim que começa" data-price="32.99">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM PRODUTO ITEM 2-->
+
+      <!-- PRODUTO ITEM 3 -->
+      <div class="flex gap-2">
+        <img src="assets/imagem-04.png" alt="as mil partes do meu coração" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div>
+          <p class="font-bold"romance </p>
+          <p class="text-sm">e um livro de romance , mas e muito triste </p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 35,90</p>
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="as mil partes do meu coração " data-price="35.90">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM PRODUTO ITEM 3-->
+
+      <!-- PRODUTO ITEM 4 -->
+      <div class="flex gap-2">
+        <img src="assets/imagem-05.webp" alt="todas as suas (im)perfeições" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div>
+          <p class="font-bold">perfeições</p>
+          <p class="text-sm">um livro com uma historia otima.</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 30,00</p>
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="todas as suas im perfeições" data-price="30">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM PRODUTO ITEM 3-->
+
+    </main>
+
+    <div class="mx-auto max-w-7xl px-2 my-2">
+      <h2 class="font-bold text-3xl">livros</h2>
+    </div>
+
+    <!-- GRID livros -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+      <!-- livros
+        ITEM 1 -->
+      <div class="flex gap-2 w-full">
+        <img src="assets/imagem-06.jpg" alt="as coisa que você só0 quando desacerela" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div class="w-full">
+          <p class="font-bold">coisas</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">42,55</p>
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="e nescessario desacerela" data-price="6">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </
+      <div class="flex gap-2 w-full">
+        <img src="assets/" alt="Guaraná Antártica Lata 350ml" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+        <div class="w-full">
+          <p class="font-bold">Guaraná Antártica Lata 350ml</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6,00</p>
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guaraná Antártica Lata 350ml" data-price="6" >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM BEBIDA ITEM 2-->
+    </div>
+    <!-- FIM GRID BEBIDAS -->
+
+    <!-- CONTATO -->
+
+    <!-- FIM CONTATO-->
+  </div>
+  <!-- FIM MENU -->
+
+  <!-- CONTATO -->
+  <footer class="w-full h-[420px] bg-zinc-900 bg-footer">
+    <div class="flex flex-col justify-center items-center px-2">
+      <h3 class="text-4xl mt-4 mb-2 font-bold text-white">Olá! Gostou desta idéia?</h3>
+      <p class="text-white">Fale comigo ou converse com o meu representante que lhe indicou este serviço. 😉👍</p>
+      <p>&nbsp;</p>
+      <p class="text-white">(31) 98410-7540 WhatsApp | Ezequias Martins</p>
+      <p class="text-white">
+        <a href="https://www.linkedin.com/in/ezequiasmartins-bhz/"> LinkedIN</a> | 
+        <a href="https://www.facebook.com/outdoorvirtual.ezequiasmartins"> Facebook</a> | 
+        <a href="https://www.instagram.com/ezequiasmartins/"> Instagram</a>
+      </p>
+      <p>&nbsp;</p>
+      <p class="text-white">Precisa de uma solução mais completa? Acesse aqui:</p>
+      <p class="text-white">👉 <a href="https://deliverybairro.com" target="_blank">deliverybairro.com</a></p>
+    </div>
+  </footer>
+  <!-- FIM CONTATO -->
+
+<!-- MODAL CART -->
+<div class="bg-black/65 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+  <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+    <h2 class="text-center font-bold text-2xl mb-2">CARRINHO DE COMPRAS</h2>
+    <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+    <p class="font-bold">Total: <span id="cart-total">0,00</span></p>
+    <p class="font-bold">Endereço de entrega:</p>
+    <input type="text" placeholder="Digite seu endereço completo..." id="address" class="w-full border-2 p-1 rounded my-1"/>
+    <input type="hidden" id="phone" value="+5531984107540" class="w-full border-2 p-1 rounded my-1" />
+    <p class="text-red-500 hidden" id="address-warn">Digite o seu endereço completo</p>
+    <div class="flex items-center justify-between mt-5 w-full">
+      <button id="close-modal-btn">Fechar</button>
+      <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+    </div>
+  </div>
+</div>
+<!-- FIM MODAL CART-->
+
+<!-- BUTTON CART FOOTER -->
+<footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+  <button class="flex items-center gap-2 text-white font-bold" id="cart-btn" >
+    (<span id="cart-count">0</span>)
+    VER CARRINHO DE COMPRAS
+    <i class="fa fa-cart-plus text-lg text-white"></i>
+  </button>
+</footer>
+<!-- FIM BUTTON CART FOOTER-->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="script.js"></script>
+</body>
+</html>
